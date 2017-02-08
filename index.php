@@ -4,11 +4,13 @@
  */
 
 if ($_SERVER['REQUEST_METHOD']=='POST') { // The method to send data is POST
-    include('php_lib/config.ini.php'); //include config
-    include('php_lib/login.lib.php'); //include functions
+    include('lib/config.ini.php'); //include config
+    include('lib/login.lib.php'); //include functions
 
     //Verify user and password sended
     if (login($_POST['usuario'],$_POST['password'])) {
+
+
 
        // Actions to realice when an user is loged
        // Ej. Save in memory the data, sign an access in a table
